@@ -17,14 +17,14 @@ const Sidebar = ({ isOpen, onClose, onAboutClick }: SidebarProps) => {
     <>
       {/* Backdrop */}
       <div 
-        className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 md:hidden z-[60] ${
+        className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 md:hidden z-[150] ${
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         onClick={onClose}
       />
 
       {/* Sidebar */}
-      <div className={`fixed top-0 right-0 h-full w-[280px] transform transition-transform duration-300 ease-in-out md:hidden z-[70] ${
+      <div className={`fixed top-0 right-0 h-full w-[280px] transform transition-transform duration-300 ease-in-out md:hidden z-[150] ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
         <div className="relative h-full">
