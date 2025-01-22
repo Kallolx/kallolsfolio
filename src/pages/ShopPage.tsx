@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FiArrowLeft, FiPackage, FiCheck, FiGrid, FiShoppingBag, FiMonitor, FiSmartphone, FiCode, FiClock, FiHeadphones, FiChevronDown, FiInfo, FiCalendar, FiShield, FiRefreshCw, FiMessageSquare, FiX, FiSend, FiPhone, FiGithub, FiDribbble, FiLinkedin, FiInstagram } from 'react-icons/fi'
+import { FiArrowLeft, FiPackage, FiCheck, FiGrid, FiShoppingBag, FiMonitor, FiSmartphone, FiCode, FiClock, FiHeadphones, FiChevronDown, FiInfo, FiCalendar, FiShield, FiRefreshCw, FiMessageSquare, FiX, FiSend, FiPhone } from 'react-icons/fi'
 import { SiNextdotjs, SiNodedotjs, SiMongodb, SiReact, SiTailwindcss, SiPostgresql, SiFramer } from 'react-icons/si'
-import { FaWhatsapp, FaBehance } from 'react-icons/fa'
+import { FaWhatsapp } from 'react-icons/fa'
 
 // Currency conversion rates
 const conversionRates = {
@@ -672,39 +672,6 @@ const PriceTag = ({ min, max, currency }: { min: number, max: number, currency: 
     </div>
   )
 }
-
-const socialLinks = [
-  { 
-    icon: FiGithub, 
-    href: "https://github.com/Kallolx", 
-    label: "GitHub",
-    color: "hover:text-[#2ea44f]"
-  },
-  { 
-    icon: FiDribbble, 
-    href: "https://dribbble.com/Kal-lol", 
-    label: "Dribbble",
-    color: "hover:text-[#ea4c89]"
-  },
-  { 
-    icon: FaBehance, 
-    href: "https://behance.net", 
-    label: "Behance",
-    color: "hover:text-[#1769ff]"
-  },
-  { 
-    icon: FiLinkedin, 
-    href: "https://www.linkedin.com/in/kamrul-hasan-dev", 
-    label: "LinkedIn",
-    color: "hover:text-[#0a66c2]"
-  },
-  { 
-    icon: FiInstagram, 
-    href: "https://instagram.com", 
-    label: "Instagram",
-    color: "hover:text-[#e4405f]"
-  }
-]
 
 const ShopPage = () => {
   const [selectedCurrency, setSelectedCurrency] = useState<Currency>('USD')

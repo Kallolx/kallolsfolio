@@ -2,7 +2,7 @@ import { FiGithub, FiDribbble, FiInstagram, FiLinkedin, FiMail, FiX } from 'reac
 import { SiBehance, SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiMui, SiRedux, 
          SiNodedotjs, SiExpress, SiMongodb, SiMysql, SiFirebase, SiGit, SiDocker, 
          SiFigma, SiAdobexd, SiAdobephotoshop } from 'react-icons/si'
-import { FaFacebookF, FaMapMarkerAlt, FaBriefcase, FaUserClock, FaGraduationCap } from 'react-icons/fa'
+import { FaMapMarkerAlt, FaBriefcase, FaUserClock, FaGraduationCap } from 'react-icons/fa'
 import { BsStarFill } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 

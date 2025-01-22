@@ -1,4 +1,4 @@
-import { FiGithub, FiTwitter, FiLinkedin, FiDribbble, FiDownload, FiEye, FiInstagram } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiDribbble, FiDownload, FiEye, FiInstagram } from 'react-icons/fi'
 import { FaBehance } from 'react-icons/fa'
 import TechSlider from './TechSlider'
 import WavingHand from './WavingHand'
