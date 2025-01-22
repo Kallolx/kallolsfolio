@@ -12,13 +12,37 @@ interface AboutProps {
 
 const About = ({ onClose }: AboutProps) => {
   const socialLinks = [
-    { icon: FiGithub, href: "https://github.com/Kallolx", label: "GitHub" },
-    { icon: FiDribbble, href: "https://dribbble.com/yourusername", label: "Dribbble" },
-    { icon: SiBehance, href: "https://behance.net/yourusername", label: "Behance" },
-    { icon: FaFacebookF, href: "https://facebook.com/kamrulhasan.kallol.9", label: "Facebook" },
-    { icon: FiInstagram, href: "https://instagram.com/yourusername", label: "Instagram" },
-    { icon: FiLinkedin, href: "https://linkedin.com/in/yourusername", label: "LinkedIn" },
-    { icon: FiMail, href: "mailto:your.email@example.com", label: "Email" }
+    { 
+      icon: FiGithub, 
+      href: "https://github.com/Kallolx", 
+      label: "GitHub",
+      color: "hover:text-[#2ea44f]"
+    },
+    { 
+      icon: FiDribbble, 
+      href: "https://dribbble.com/Kal-lol", 
+      label: "Dribbble",
+      color: "hover:text-[#ea4c89]"
+    },
+    { 
+      icon: SiBehance, 
+      href: "https://behance.net", 
+      label: "Behance",
+      color: "hover:text-[#1769ff]"
+    },
+    { 
+      icon: FiLinkedin, 
+      href: "https://www.linkedin.com/in/kamrul-hasan-dev", 
+      label: "LinkedIn",
+      color: "hover:text-[#0a66c2]"
+    },
+    { 
+      icon: FiInstagram, 
+      href: "https://instagram.com", 
+      label: "Instagram",
+      color: "hover:text-[#e4405f]"
+    },
+    { icon: FiMail, href: "mailto:kallol.business.ds@gmail.com", label: "Email" }
   ]
 
   const frontendSkills = [
@@ -136,12 +160,12 @@ const About = ({ onClose }: AboutProps) => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors group"
-                  whileHover={{ scale: 1.1, rotate: 360 }}
+                  className={`w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 transition-all group ${social.color}`}
+                  whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   title={social.label}
                 >
-                  <social.icon className="w-4 h-4 md:w-5 md:h-5 text-white/60 group-hover:text-white transition-colors" />
+                  <social.icon className="w-4 h-4 md:w-5 md:h-5 text-white/60 group-hover:text-current transition-colors" />
                 </motion.a>
               ))}
             </motion.div>

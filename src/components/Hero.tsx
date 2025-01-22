@@ -1,4 +1,5 @@
-import { FiGithub, FiTwitter, FiLinkedin, FiDribbble, FiDownload, FiEye } from 'react-icons/fi'
+import { FiGithub, FiTwitter, FiLinkedin, FiDribbble, FiDownload, FiEye, FiInstagram } from 'react-icons/fi'
+import { FaBehance } from 'react-icons/fa'
 import TechSlider from './TechSlider'
 import WavingHand from './WavingHand'
 
@@ -55,17 +56,20 @@ const Hero = () => {
 
             {/* Social Links */}
             <div className="flex gap-4 sm:gap-6 justify-center sm:justify-start">
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              <a href="https://github.com/Kallolx" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-[#2ea44f] transition-colors">
                 <FiGithub className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              <a href="https://dribbble.com/Kal-lol" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-[#ea4c89] transition-colors">
                 <FiDribbble className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
-                <FiTwitter className="w-5 h-5 sm:w-6 sm:h-6" />
+              <a href="https://behance.net" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-[#1769ff] transition-colors">
+                <FaBehance className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/in/kamrul-hasan-dev" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-[#0a66c2] transition-colors">
                 <FiLinkedin className="w-5 h-5 sm:w-6 sm:h-6" />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-[#e4405f] transition-colors">
+                <FiInstagram className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
             </div>
           </div>

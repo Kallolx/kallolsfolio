@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FiArrowLeft, FiPackage, FiCheck, FiGrid, FiShoppingBag, FiMonitor, FiSmartphone, FiCode, FiClock, FiHeadphones, FiChevronDown, FiInfo, FiCalendar, FiShield, FiRefreshCw, FiMessageSquare, FiX, FiSend, FiPhone } from 'react-icons/fi'
+import { FiArrowLeft, FiPackage, FiCheck, FiGrid, FiShoppingBag, FiMonitor, FiSmartphone, FiCode, FiClock, FiHeadphones, FiChevronDown, FiInfo, FiCalendar, FiShield, FiRefreshCw, FiMessageSquare, FiX, FiSend, FiPhone, FiGithub, FiDribbble, FiLinkedin, FiInstagram } from 'react-icons/fi'
 import { SiNextdotjs, SiNodedotjs, SiMongodb, SiReact, SiTailwindcss, SiPostgresql, SiFramer } from 'react-icons/si'
-import { FaWhatsapp } from 'react-icons/fa'
+import { FaWhatsapp, FaBehance } from 'react-icons/fa'
 
 // Currency conversion rates
 const conversionRates = {
@@ -673,6 +673,39 @@ const PriceTag = ({ min, max, currency }: { min: number, max: number, currency: 
   )
 }
 
+const socialLinks = [
+  { 
+    icon: FiGithub, 
+    href: "https://github.com/Kallolx", 
+    label: "GitHub",
+    color: "hover:text-[#2ea44f]"
+  },
+  { 
+    icon: FiDribbble, 
+    href: "https://dribbble.com/Kal-lol", 
+    label: "Dribbble",
+    color: "hover:text-[#ea4c89]"
+  },
+  { 
+    icon: FaBehance, 
+    href: "https://behance.net", 
+    label: "Behance",
+    color: "hover:text-[#1769ff]"
+  },
+  { 
+    icon: FiLinkedin, 
+    href: "https://www.linkedin.com/in/kamrul-hasan-dev", 
+    label: "LinkedIn",
+    color: "hover:text-[#0a66c2]"
+  },
+  { 
+    icon: FiInstagram, 
+    href: "https://instagram.com", 
+    label: "Instagram",
+    color: "hover:text-[#e4405f]"
+  }
+]
+
 const ShopPage = () => {
   const [selectedCurrency, setSelectedCurrency] = useState<Currency>('USD')
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null)
@@ -1224,7 +1257,7 @@ const ShopPage = () => {
       {/* Live Support Button and Chat */}
       <AnimatePresence>
         <motion.div 
-          className="fixed bottom-6 right-6 z-50"
+          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.3 }}
@@ -1232,80 +1265,80 @@ const ShopPage = () => {
           {!isSupportOpen ? (
             <motion.button
               onClick={() => setIsSupportOpen(true)}
-              className="group relative bg-gradient-to-r from-purple-500 to-blue-500 p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+              className="group relative bg-gradient-to-r from-purple-500 to-blue-500 p-3 sm:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <FiMessageSquare className="w-6 h-6 text-white" />
+              <FiMessageSquare className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
             </motion.button>
           ) : (
             <motion.div
-              className="bg-[#1a1a1a] rounded-2xl w-96 shadow-2xl border border-white/10"
+              className="bg-[#1a1a1a] rounded-2xl w-[calc(100vw-32px)] sm:w-[360px] max-w-[360px] shadow-2xl border border-white/10"
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.95 }}
               transition={{ duration: 0.2 }}
             >
               {/* Chat Header */}
-              <div className="p-4 border-b border-white/10">
+              <div className="p-3 sm:p-4 border-b border-white/10">
                 <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-2 sm:gap-3">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                    <span className="text-white font-medium">Live Support</span>
+                    <span className="text-white font-medium text-sm sm:text-base">Live Support</span>
                   </div>
                   <button 
                     onClick={() => setIsSupportOpen(false)}
-                    className="text-white/60 hover:text-white transition-colors"
+                    className="text-white/60 hover:text-white transition-colors p-1"
                   >
-                    <FiX className="w-5 h-5" />
+                    <FiX className="w-4 h-4 sm:w-5 sm:h-5" />
                   </button>
                 </div>
-                <p className="text-white/60 text-sm">Get instant help through any channel</p>
+                <p className="text-white/60 text-xs sm:text-sm">Get instant help through any channel</p>
               </div>
 
               {/* Quick Contact Options */}
-              <div className="p-4 space-y-3">
+              <div className="p-3 sm:p-4 space-y-2 sm:space-y-3">
                 {/* WhatsApp */}
                 <a 
                   href="https://wa.me/8801831624571" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 bg-white/5 hover:bg-white/10 p-4 rounded-xl transition-colors group"
+                  className="flex items-center gap-3 bg-white/5 hover:bg-white/10 p-3 sm:p-4 rounded-xl transition-colors group"
                 >
-                  <div className="w-10 h-10 bg-green-500/10 rounded-full flex items-center justify-center">
-                    <FaWhatsapp className="w-5 h-5 text-green-500" />
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-500/10 rounded-full flex items-center justify-center">
+                    <FaWhatsapp className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" />
                   </div>
                   <div>
-                    <h3 className="text-white font-medium mb-0.5">Chat on WhatsApp</h3>
-                    <p className="text-white/60 text-sm">Usually replies within minutes</p>
+                    <h3 className="text-white font-medium text-sm sm:text-base mb-0.5">Chat on WhatsApp</h3>
+                    <p className="text-white/60 text-xs sm:text-sm">Usually replies within minutes</p>
                   </div>
-                  <FiArrowLeft className="w-5 h-5 text-white/40 group-hover:text-white ml-auto transition-colors rotate-180" />
+                  <FiArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 text-white/40 group-hover:text-white ml-auto transition-colors rotate-180" />
                 </a>
 
                 {/* Call */}
                 <a 
                   href="tel:+8801831624571" 
-                  className="flex items-center gap-3 bg-white/5 hover:bg-white/10 p-4 rounded-xl transition-colors group"
+                  className="flex items-center gap-3 bg-white/5 hover:bg-white/10 p-3 sm:p-4 rounded-xl transition-colors group"
                 >
-                  <div className="w-10 h-10 bg-blue-500/10 rounded-full flex items-center justify-center">
-                    <FiPhone className="w-5 h-5 text-blue-500" />
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-500/10 rounded-full flex items-center justify-center">
+                    <FiPhone className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500" />
                   </div>
                   <div>
-                    <h3 className="text-white font-medium mb-0.5">Call Support</h3>
-                    <p className="text-white/60 text-sm">Available 24/7</p>
+                    <h3 className="text-white font-medium text-sm sm:text-base mb-0.5">Call Support</h3>
+                    <p className="text-white/60 text-xs sm:text-sm">Available 24/7</p>
                   </div>
-                  <FiArrowLeft className="w-5 h-5 text-white/40 group-hover:text-white ml-auto transition-colors rotate-180" />
+                  <FiArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 text-white/40 group-hover:text-white ml-auto transition-colors rotate-180" />
                 </a>
               </div>
 
               {/* Chat Messages */}
-              <div className="h-64 p-4 overflow-y-auto border-t border-white/10">
+              <div className="h-48 sm:h-64 p-3 sm:p-4 overflow-y-auto border-t border-white/10">
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center flex-shrink-0">
-                    <FiHeadphones className="w-4 h-4 text-white" />
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center flex-shrink-0">
+                    <FiHeadphones className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
                   </div>
-                  <div className="bg-white/5 rounded-2xl rounded-tl-none p-3 text-white/80 text-sm">
+                  <div className="bg-white/5 rounded-2xl rounded-tl-none p-2.5 sm:p-3 text-white/80 text-xs sm:text-sm">
                     Hi there! 👋 How can I help you today? Choose from the quick options below or ask your own question.
                   </div>
                 </div>
@@ -1313,25 +1346,25 @@ const ShopPage = () => {
                 {/* Quick Questions */}
                 <div className="grid grid-cols-1 gap-2 mb-4">
                   <button 
-                    className="text-left bg-white/5 hover:bg-white/10 text-white/80 text-sm p-3 rounded-xl transition-colors"
+                    className="text-left bg-white/5 hover:bg-white/10 text-white/80 text-xs sm:text-sm p-2.5 sm:p-3 rounded-xl transition-colors"
                     onClick={() => setMessage("What's included in the packages?")}
                   >
                     What's included in the packages? 📦
                   </button>
                   <button 
-                    className="text-left bg-white/5 hover:bg-white/10 text-white/80 text-sm p-3 rounded-xl transition-colors"
+                    className="text-left bg-white/5 hover:bg-white/10 text-white/80 text-xs sm:text-sm p-2.5 sm:p-3 rounded-xl transition-colors"
                     onClick={() => setMessage("How long does delivery take?")}
                   >
                     How long does delivery take? ⏱️
                   </button>
                   <button 
-                    className="text-left bg-white/5 hover:bg-white/10 text-white/80 text-sm p-3 rounded-xl transition-colors"
+                    className="text-left bg-white/5 hover:bg-white/10 text-white/80 text-xs sm:text-sm p-2.5 sm:p-3 rounded-xl transition-colors"
                     onClick={() => setMessage("Do you offer customization?")}
                   >
                     Do you offer customization? 🛠️
                   </button>
                   <button 
-                    className="text-left bg-white/5 hover:bg-white/10 text-white/80 text-sm p-3 rounded-xl transition-colors"
+                    className="text-left bg-white/5 hover:bg-white/10 text-white/80 text-xs sm:text-sm p-2.5 sm:p-3 rounded-xl transition-colors"
                     onClick={() => setMessage("What payment methods do you accept?")}
                   >
                     What payment methods do you accept? 💳
@@ -1339,42 +1372,42 @@ const ShopPage = () => {
                 </div>
 
                 {/* Common Questions & Answers */}
-                <div className="space-y-4 border-t border-white/10 pt-4">
-                  <div className="text-white/40 text-xs uppercase">Frequently Asked Questions</div>
+                <div className="space-y-3 sm:space-y-4 border-t border-white/10 pt-3 sm:pt-4">
+                  <div className="text-white/40 text-[10px] sm:text-xs uppercase">Frequently Asked Questions</div>
                   
                   <div className="space-y-2">
-                    <div className="bg-white/5 p-3 rounded-xl">
-                      <h4 className="text-white font-medium text-sm mb-1">How does the support work? 🤝</h4>
-                      <p className="text-white/60 text-sm">We provide dedicated support during the development and after delivery. Each package includes a support period.</p>
+                    <div className="bg-white/5 p-2.5 sm:p-3 rounded-xl">
+                      <h4 className="text-white font-medium text-xs sm:text-sm mb-1">How does the support work? 🤝</h4>
+                      <p className="text-white/60 text-[11px] sm:text-sm">We provide dedicated support during the development and after delivery. Each package includes a support period.</p>
                     </div>
                     
-                    <div className="bg-white/5 p-3 rounded-xl">
-                      <h4 className="text-white font-medium text-sm mb-1">Do you provide source code? 📄</h4>
-                      <p className="text-white/60 text-sm">Yes, you'll receive full source code access with documentation for your project.</p>
+                    <div className="bg-white/5 p-2.5 sm:p-3 rounded-xl">
+                      <h4 className="text-white font-medium text-xs sm:text-sm mb-1">Do you provide source code? 📄</h4>
+                      <p className="text-white/60 text-[11px] sm:text-sm">Yes, you'll receive full source code access with documentation for your project.</p>
                     </div>
                     
-                    <div className="bg-white/5 p-3 rounded-xl">
-                      <h4 className="text-white font-medium text-sm mb-1">Can I request changes? 🔄</h4>
-                      <p className="text-white/60 text-sm">Yes, we offer revision rounds based on your package. Additional revisions can be arranged.</p>
+                    <div className="bg-white/5 p-2.5 sm:p-3 rounded-xl">
+                      <h4 className="text-white font-medium text-xs sm:text-sm mb-1">Can I request changes? 🔄</h4>
+                      <p className="text-white/60 text-[11px] sm:text-sm">Yes, we offer revision rounds based on your package. Additional revisions can be arranged.</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Chat Input */}
-              <div className="p-4 border-t border-white/10">
+              <div className="p-3 sm:p-4 border-t border-white/10">
                 <div className="relative">
                   <input
                     type="text"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Type your message or choose from above..."
-                    className="w-full bg-white/5 text-white placeholder-white/40 rounded-xl py-3 pl-4 pr-12 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
+                    placeholder="Type your message..."
+                    className="w-full bg-white/5 text-white text-xs sm:text-sm placeholder-white/40 rounded-xl py-2.5 sm:py-3 pl-3 sm:pl-4 pr-10 sm:pr-12 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
                   />
                   <button 
-                    className="absolute right-2 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-colors p-2"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-colors p-1.5 sm:p-2"
                   >
-                    <FiSend className="w-4 h-4" />
+                    <FiSend className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </button>
                 </div>
               </div>
