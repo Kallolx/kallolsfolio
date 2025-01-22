@@ -16,31 +16,31 @@ const About = ({ onClose }: AboutProps) => {
       icon: FiGithub, 
       href: "https://github.com/Kallolx", 
       label: "GitHub",
-      color: "hover:text-[#2ea44f]"
+      color: "text-[#2ea44f] bg-[#2ea44f]/10 hover:bg-[#2ea44f]/20 md:bg-white/5"
     },
     { 
       icon: FiDribbble, 
       href: "https://dribbble.com/Kal-lol", 
       label: "Dribbble",
-      color: "hover:text-[#ea4c89]"
+      color: "text-[#ea4c89] bg-[#ea4c89]/10 hover:bg-[#ea4c89]/20 md:bg-white/5"
     },
     { 
       icon: SiBehance, 
       href: "https://behance.net", 
       label: "Behance",
-      color: "hover:text-[#1769ff]"
+      color: "text-[#1769ff] bg-[#1769ff]/10 hover:bg-[#1769ff]/20 md:bg-white/5"
     },
     { 
       icon: FiLinkedin, 
       href: "https://www.linkedin.com/in/kamrul-hasan-dev", 
       label: "LinkedIn",
-      color: "hover:text-[#0a66c2]"
+      color: "text-[#0a66c2] bg-[#0a66c2]/10 hover:bg-[#0a66c2]/20 md:bg-white/5"
     },
     { 
       icon: FiInstagram, 
       href: "https://instagram.com", 
       label: "Instagram",
-      color: "hover:text-[#e4405f]"
+      color: "text-[#e4405f] bg-[#e4405f]/10 hover:bg-[#e4405f]/20 md:bg-white/5"
     },
     { icon: FiMail, href: "mailto:kallol.business.ds@gmail.com", label: "Email" }
   ]
@@ -160,12 +160,12 @@ const About = ({ onClose }: AboutProps) => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 transition-all group ${social.color}`}
+                  className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all ${social.color}`}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   title={social.label}
                 >
-                  <social.icon className="w-4 h-4 md:w-5 md:h-5 text-white/60 group-hover:text-current transition-colors" />
+                  <social.icon className="w-4 h-4 md:w-5 md:h-5" />
                 </motion.a>
               ))}
             </motion.div>

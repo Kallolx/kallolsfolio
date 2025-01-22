@@ -5,33 +5,33 @@ import { FaBehance, FaWhatsapp } from 'react-icons/fa'
 const socialLinks = [
   { 
     icon: FiGithub, 
-    href: "https://github.com/Kallox", 
+    href: "https://github.com/Kallolx", 
     label: "GitHub",
-    color: "hover:text-[#2ea44f]"
+    color: "text-[#2ea44f] bg-[#2ea44f]/10 hover:bg-[#2ea44f]/20"
   },
   { 
     icon: FiDribbble, 
     href: "https://dribbble.com/Kal-lol", 
     label: "Dribbble",
-    color: "hover:text-[#ea4c89]"
+    color: "text-[#ea4c89] bg-[#ea4c89]/10 hover:bg-[#ea4c89]/20"
   },
   { 
     icon: FaBehance, 
-    href: "https://www.behance.net/kamrulhasankallol", 
+    href: "https://behance.net", 
     label: "Behance",
-    color: "hover:text-[#1769ff]"
+    color: "text-[#1769ff] bg-[#1769ff]/10 hover:bg-[#1769ff]/20"
   },
   { 
     icon: FiLinkedin, 
     href: "https://www.linkedin.com/in/kamrul-hasan-dev", 
     label: "LinkedIn",
-    color: "hover:text-[#0a66c2]"
+    color: "text-[#0a66c2] bg-[#0a66c2]/10 hover:bg-[#0a66c2]/20"
   },
   { 
     icon: FiInstagram, 
-    href: "https://www.instagram.com/kamrul_hasan_kallol", 
+    href: "https://instagram.com", 
     label: "Instagram",
-    color: "hover:text-[#e4405f]"
+    color: "text-[#e4405f] bg-[#e4405f]/10 hover:bg-[#e4405f]/20"
   }
 ]
 
@@ -133,7 +133,7 @@ const Contact = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-12 h-12 bg-white/[0.03] hover:bg-white/[0.05] border border-white/10 rounded-xl flex items-center justify-center transition-all duration-300 ${link.color}`}
+                  className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${link.color}`}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
