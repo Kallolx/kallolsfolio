@@ -42,8 +42,10 @@ const Sidebar = ({ isOpen, onClose, onAboutClick }: SidebarProps) => {
               </button>
 
               {/* Logo */}
-              <div className="p-6 pb-8">
-                <AnimatedLogo />
+              <div className="p-5 pb-4">
+                <div className="scale-75 origin-left">
+                  <AnimatedLogo />
+                </div>
               </div>
 
               {/* Navigation Links */}

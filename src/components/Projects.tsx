@@ -82,12 +82,13 @@ const Projects = ({ featured = false }: ProjectsProps) => {
         {/* View All Indicator */}
         {featured && (
           <motion.div 
-            className="mt-16 flex justify-center"
+            className="mt-16 flex flex-col items-center gap-3"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
+            <span className="text-sm text-white/60">More ?</span>
             <motion.a
               href="/projects"
               className="group relative w-12 h-12 bg-white/5 hover:bg-white/10 rounded-full flex items-center justify-center transition-colors border border-white/10 hover:border-white/20"

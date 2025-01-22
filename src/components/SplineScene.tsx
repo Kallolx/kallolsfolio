@@ -49,7 +49,7 @@ const SplineScene = () => {
       >
         <h1 className="text-6xl md:text-7xl lg:text-9xl font-bold text-center leading-tight tracking-wider font-audiowide">
           <span className="bg-gradient-to-r from-[#b0f3f1] via-[#ffcfdf] to-[#ffcfdf] text-transparent bg-clip-text drop-shadow-[0_8px_24px_rgba(0,0,0,0.8)]">
-            NEXT REALITY
+            PROJECTS ?
           </span>
         </h1>
       </motion.div>

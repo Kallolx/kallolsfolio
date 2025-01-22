@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { FiMail } from 'react-icons/fi'
 import AnimatedLogo from './AnimatedLogo'
 import Sidebar from './Sidebar'
 
@@ -13,17 +12,34 @@ const Navbar = ({ onAboutClick }: NavbarProps) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setHasScrolled(window.scrollY > 0)
+      const scrollContainer = document.querySelector('[data-scroll-container]')
+      if (scrollContainer) {
+        setHasScrolled(scrollContainer.scrollTop > 50)
+      }
     }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    const scrollContainer = document.querySelector('[data-scroll-container]')
+    if (scrollContainer) {
+      scrollContainer.addEventListener('scroll', handleScroll)
+    }
+
+    return () => {
+      if (scrollContainer) {
+        scrollContainer.removeEventListener('scroll', handleScroll)
+      }
+    }
   }, [])
 
   return (
     <>
-      <nav className="fixed w-full top-0 z-50">
-        <div className={`relative transition-all duration-300 ${hasScrolled ? 'bg-black/50 backdrop-blur-md border-b border-white/10' : ''}`}>
+      <nav className="fixed w-full top-0 z-[100]">
+        <div 
+          className={`relative transition-all duration-300 ${
+            hasScrolled 
+              ? 'bg-black/70 backdrop-blur-xl border-b border-white/10' 
+              : 'bg-black/30 backdrop-blur-md'
+          }`}
+        >
           <div className="max-w-7xl mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
               {/* Logo */}
@@ -54,7 +70,7 @@ const Navbar = ({ onAboutClick }: NavbarProps) => {
                 </a>
                 <a href="#contact" className="group">
                   <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2.5 rounded-xl hover:opacity-90 transition-all flex items-center gap-2">
-                    <FiMail className="w-5 h-5 group-hover:opacity-80 transition-opacity" />
+                    <img src="/icons/contact.png" alt="Contact" className="w-5 h-5 opacity-90 group-hover:opacity-100 transition-opacity" />
                     <span className="text-sm font-medium">Contact</span>
                   </div>
                 </a>

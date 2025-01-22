@@ -24,7 +24,7 @@ import {
 export const allProjects = [
   {
     id: 1,
-    name: "Study Spot",
+    name: "Educational",
     image: "/projects/p1.png",
     description: "An educational platform built with TypeScript for enhanced learning experience.",
     liveLink: "https://study-spot-kappa.vercel.app",
@@ -42,7 +42,7 @@ export const allProjects = [
   },
   {
     id: 3,
-    name: "Asha E-commerce",
+    name: "E-commerce",
     image: "/projects/p3.png",
     description: "Full-featured e-commerce platform with product management and secure checkout.",
     liveLink: "https://ashamart.vercel.app",
@@ -51,7 +51,7 @@ export const allProjects = [
   },
   {
     id: 4,
-    name: "Business POS",
+    name: "POS",
     image: "/projects/p4.png",
     description: "Web-based management software with POS system and inventory tracking.",
     liveLink: "https://ashaenterprice.vercel.app",
@@ -60,7 +60,7 @@ export const allProjects = [
   },
   {
     id: 5,
-    name: "BUBT Student Tool",
+    name: "AI Student Tools",
     image: "/projects/p5.png",
     description: "Comprehensive student management tool for BUBT students.",
     liveLink: "https://studbuddy.vercel.app",
@@ -69,7 +69,7 @@ export const allProjects = [
   },
   {
     id: 6,
-    name: "Babui Trades",
+    name: "Business Landing Page",
     image: "/projects/p6.png",
     description: "Corporate website with modern design and interactive features.",
     liveLink: "https://msbabuitrads.vercel.app",
@@ -78,7 +78,7 @@ export const allProjects = [
   },
   {
     id: 7,
-    name: "Akashi Agro",
+    name: "Agro e-commerce",
     image: "/projects/p7.png",
     description: "Agriculture business platform with product showcase and ordering system.",
     liveLink: "https://akashiagro.vercel.app",
@@ -87,7 +87,7 @@ export const allProjects = [
   },
   {
     id: 8,
-    name: "PlayRelax Game",
+    name: "Webgame Platform",
     image: "/projects/p8.png",
     description: "Web-based gaming platform with multiple interactive games.",
     liveLink: "https://playrelax-webgame.vercel.app",
@@ -96,7 +96,7 @@ export const allProjects = [
   },
   {
     id: 9,
-    name: "Dhaka Metro",
+    name: "Metro Ticket Management",
     image: "/projects/p9.png",
     description: "Comprehensive guide for Dhaka Metro with routes and schedules.",
     liveLink: "https://dhaka-metro.vercel.app",
@@ -105,7 +105,7 @@ export const allProjects = [
   },
   {
     id: 10,
-    name: "ESCO-DEM",
+    name: "Location Service",
     image: "/projects/p10.png",
     description: "Energy Service Company Demand and Energy Management System.",
     liveLink: "https://esco-dem.vercel.app",

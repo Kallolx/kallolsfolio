@@ -8,6 +8,8 @@ import ViewAllPage from './pages/ViewAllPage'
 import ShopPage from './pages/ShopPage'
 import SplineScene from './components/SplineScene'
 import Contact from './components/Contact'
+import ShopPromo from './components/ShopPromo'
+import LocomotiveScrollProvider from './components/LocomotiveScroll'
 
 function App() {
   const [isAboutVisible, setIsAboutVisible] = useState(false)
@@ -19,12 +21,27 @@ function App() {
         <Route 
           path="/" 
           element={
-            <div className="min-h-screen bg-black">
+            <div className="relative">
               <Navbar onAboutClick={() => setIsAboutVisible(true)} />
-              <Hero />
-              <SplineScene />
-              <Projects featured={true} />
-              <Contact />
+              <LocomotiveScrollProvider>
+                <div className="min-h-screen bg-black" data-scroll-section>
+                  <div data-scroll data-scroll-speed="-1">
+                    <Hero />
+                  </div>
+                  <div data-scroll data-scroll-speed="0.3">
+                    <SplineScene />
+                  </div>
+                  <div data-scroll data-scroll-speed="0.1">
+                    <Projects featured={true} />
+                  </div>
+                  <div data-scroll data-scroll-speed="0.2">
+                    <ShopPromo />
+                  </div>
+                  <div data-scroll data-scroll-speed="0.1">
+                    <Contact />
+                  </div>
+                </div>
+              </LocomotiveScrollProvider>
               {isAboutVisible && <About onClose={() => setIsAboutVisible(false)} />}
             </div>
           } 

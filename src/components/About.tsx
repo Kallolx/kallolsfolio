@@ -285,16 +285,6 @@ const About = ({ onClose }: AboutProps) => {
                       <li>Portfolio and business websites</li>
                     </ul>
                   </div>
-                  <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 p-3 md:p-4 rounded-lg md:rounded-xl">
-                    <h4 className="text-base md:text-lg text-white/80 font-medium mb-2 flex items-center gap-2">
-                      <BsStarFill className="w-3.5 h-3.5 md:w-4 md:h-4 text-yellow-500" />
-                      Client Testimonial
-                    </h4>
-                    <p className="text-sm md:text-base text-white/60 italic">
-                      "Kamrul is an exceptional developer who consistently delivers high-quality work. 
-                      His attention to detail and problem-solving skills are outstanding."
-                    </p>
-                  </div>
                 </div>
               </motion.div>
             </motion.section>
