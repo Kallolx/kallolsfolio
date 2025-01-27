@@ -19,12 +19,54 @@ import {
   SiStripe,
   SiVercel
 } from 'react-icons/si'
+import { useState } from 'react'
 
 // All projects data
 export const allProjects = [
   {
+    id: 14,
+    name: "AI Tools Platform",
+    category: "Technology",
+    image: "/projects/aitools.png",
+    description: "A comprehensive platform featuring various AI-powered tools and utilities.",
+    liveLink: "https://aitools-xi.vercel.app/",
+    githubLink: "https://github.com/Kallolx/aitools",
+    tech: ["Next.js", "TypeScript", "AI Integration"]
+  },
+  {
+    id: 13,
+    name: "Qiurin",
+    category: "Business",
+    image: "/projects/qiurin.png",
+    description: "Modern business platform with advanced features and elegant design.",
+    liveLink: "https://www.qourin.com",
+    githubLink: "https://github.com/Kallolx/qiurin",
+    tech: ["Next.js", "React", "Tailwind"]
+  },
+  {
+    id: 12,
+    name: "Grayjays",
+    category: "Education",
+    image: "/projects/grayjays.png",
+    description: "Professional driving school platform with course management and scheduling.",
+    liveLink: "https://grayjays.vercel.app/",
+    githubLink: "https://github.com/Kallolx/grayjays",
+    tech: ["React", "Node.js", "MongoDB"]
+  },
+  {
+    id: 11,
+    name: "Travel Agency",
+    category: "Business",
+    image: "/projects/travel.png",
+    description: "Complete travel agency solution with booking and management features.",
+    liveLink: "https://travelagency-peach.vercel.app/",
+    githubLink: "https://github.com/Kallolx/travel-agency",
+    tech: ["Next.js", "Tailwind", "Booking API"]
+  },
+  {
     id: 1,
     name: "Educational",
+    category: "Education",
     image: "/projects/p1.png",
     description: "An educational platform built with TypeScript for enhanced learning experience.",
     liveLink: "https://study-spot-kappa.vercel.app",
@@ -34,6 +76,7 @@ export const allProjects = [
   {
     id: 2,
     name: "Casino",
+    category: "Entertainment",
     image: "/projects/p2.png",
     description: "Modern betting platform with real-time updates and secure transactions.",
     liveLink: "https://dhakabet.vercel.app",
@@ -43,6 +86,7 @@ export const allProjects = [
   {
     id: 3,
     name: "E-commerce",
+    category: "Business",
     image: "/projects/p3.png",
     description: "Full-featured e-commerce platform with product management and secure checkout.",
     liveLink: "https://ashamart.vercel.app",
@@ -52,6 +96,7 @@ export const allProjects = [
   {
     id: 4,
     name: "POS",
+    category: "Business",
     image: "/projects/p4.png",
     description: "Web-based management software with POS system and inventory tracking.",
     liveLink: "https://ashaenterprice.vercel.app",
@@ -61,6 +106,7 @@ export const allProjects = [
   {
     id: 5,
     name: "AI Student Tools",
+    category: "Education",
     image: "/projects/p5.png",
     description: "Comprehensive student management tool for BUBT students.",
     liveLink: "https://studbuddy.vercel.app",
@@ -70,6 +116,7 @@ export const allProjects = [
   {
     id: 6,
     name: "Business Landing Page",
+    category: "Business",
     image: "/projects/p6.png",
     description: "Corporate website with modern design and interactive features.",
     liveLink: "https://msbabuitrads.vercel.app",
@@ -79,6 +126,7 @@ export const allProjects = [
   {
     id: 7,
     name: "Agro e-commerce",
+    category: "Business",
     image: "/projects/p7.png",
     description: "Agriculture business platform with product showcase and ordering system.",
     liveLink: "https://akashiagro.vercel.app",
@@ -88,6 +136,7 @@ export const allProjects = [
   {
     id: 8,
     name: "Webgame Platform",
+    category: "Entertainment",
     image: "/projects/p8.png",
     description: "Web-based gaming platform with multiple interactive games.",
     liveLink: "https://playrelax-webgame.vercel.app",
@@ -97,20 +146,12 @@ export const allProjects = [
   {
     id: 9,
     name: "Metro Ticket Management",
+    category: "Business",
     image: "/projects/p9.png",
     description: "Comprehensive guide for Dhaka Metro with routes and schedules.",
     liveLink: "https://dhaka-metro.vercel.app",
     githubLink: "https://github.com/Kallolx/dhaka-metro",
     tech: ["React", "Maps API", "Real-time"]
-  },
-  {
-    id: 10,
-    name: "Location Service",
-    image: "/projects/p10.png",
-    description: "Energy Service Company Demand and Energy Management System.",
-    liveLink: "https://esco-dem.vercel.app",
-    githubLink: "https://github.com/Kallolx/esco-dem",
-    tech: ["Next.js", "TypeScript", "Tailwind"]
   }
 ]
 
@@ -170,6 +211,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 }
 
 const ViewAllPage = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const categories = ["All", ...new Set(allProjects.map(project => project.category))];
+
+  const filteredProjects = selectedCategory === "All" 
+    ? allProjects 
+    : allProjects.filter(project => project.category === selectedCategory);
+
   const techStack = {
     primary: [
       { 
@@ -300,10 +348,37 @@ const ViewAllPage = () => {
         </div>
       </div>
 
+      {/* Category Filter */}
+      <div className="container mx-auto px-4 pt-20">
+        <motion.div 
+          className="flex flex-wrap gap-4 justify-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {categories.map((category, index) => (
+            <motion.button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-6 py-2 rounded-full border ${
+                selectedCategory === category 
+                  ? 'bg-white/10 border-white/20' 
+                  : 'bg-transparent border-white/10 hover:border-white/20'
+              } transition-all duration-300`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
+            >
+              <span className="text-sm font-medium text-white/80">{category}</span>
+            </motion.button>
+          ))}
+        </motion.div>
+      </div>
+
       {/* Projects Grid */}
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 pb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {allProjects.map(project => (
+          {filteredProjects.map(project => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>

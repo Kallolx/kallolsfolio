@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { allProjects } from '../pages/ViewAllPage'
 
 // Featured projects for home page (IDs of projects to show)
-const featuredProjectIds = [1, 2, 3, 4]
+const featuredProjectIds = [14, 13, 12, 11]
 
 interface ProjectCardProps {
   project: typeof allProjects[0];
