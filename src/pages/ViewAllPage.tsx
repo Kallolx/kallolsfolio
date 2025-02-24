@@ -24,46 +24,6 @@ import { useState } from 'react'
 // All projects data
 export const allProjects = [
   {
-    id: 14,
-    name: "AI Tools Platform",
-    category: "Technology",
-    image: "/projects/aitools.png",
-    description: "A comprehensive platform featuring various AI-powered tools and utilities.",
-    liveLink: "https://aitools-xi.vercel.app/",
-    githubLink: "https://github.com/Kallolx/aitools",
-    tech: ["Next.js", "TypeScript", "AI Integration"]
-  },
-  {
-    id: 13,
-    name: "Qiurin",
-    category: "Business",
-    image: "/projects/qiurin.png",
-    description: "Modern business platform with advanced features and elegant design.",
-    liveLink: "https://www.qourin.com",
-    githubLink: "https://github.com/Kallolx/qiurin",
-    tech: ["Next.js", "React", "Tailwind"]
-  },
-  {
-    id: 12,
-    name: "Grayjays",
-    category: "Education",
-    image: "/projects/grayjays.png",
-    description: "Professional driving school platform with course management and scheduling.",
-    liveLink: "https://grayjays.vercel.app/",
-    githubLink: "https://github.com/Kallolx/grayjays",
-    tech: ["React", "Node.js", "MongoDB"]
-  },
-  {
-    id: 11,
-    name: "Travel Agency",
-    category: "Business",
-    image: "/projects/travel.png",
-    description: "Complete travel agency solution with booking and management features.",
-    liveLink: "https://travelagency-peach.vercel.app/",
-    githubLink: "https://github.com/Kallolx/travel-agency",
-    tech: ["Next.js", "Tailwind", "Booking API"]
-  },
-  {
     id: 1,
     name: "Educational",
     category: "Education",
@@ -75,56 +35,46 @@ export const allProjects = [
   },
   {
     id: 2,
-    name: "Casino",
-    category: "Entertainment",
-    image: "/projects/p2.png",
-    description: "Modern betting platform with real-time updates and secure transactions.",
-    liveLink: "https://dhakabet.vercel.app",
-    githubLink: "https://github.com/Kallolx/casino",
-    tech: ["React", "Node.js", "WebSocket"]
+    name: "Driving School",
+    category: "Business",
+    image: "/projects/grayjays.png",
+    description: "Professional driving school platform with course management and scheduling.",
+    liveLink: "https://grayjays.vercel.app/",
+    githubLink: "https://github.com/Kallolx/grayjays",
+    tech: ["React", "Node.js", "MongoDB"]
   },
   {
     id: 3,
-    name: "E-commerce",
-    category: "Business",
-    image: "/projects/p3.png",
-    description: "Full-featured e-commerce platform with product management and secure checkout.",
-    liveLink: "https://ashamart.vercel.app",
-    githubLink: "https://github.com/Kallolx/asha-ecom",
-    tech: ["Next.js", "MongoDB", "Stripe"]
+    name: "Bright Youth",
+    category: "Education",
+    image: "/projects/youth.png",
+    description: "A beautiful landing page for a youth academy.",
+    liveLink: "https://bright-youth-academy.vercel.app/",
+    githubLink: "https://github.com/Kallolx/brightyouth",
+    tech: ["Next.js", "Tailwind", "Booking API"]
   },
   {
     id: 4,
-    name: "POS",
+    name: "GMC Point",
     category: "Business",
-    image: "/projects/p4.png",
-    description: "Web-based management software with POS system and inventory tracking.",
-    liveLink: "https://ashaenterprice.vercel.app",
-    githubLink: "https://github.com/Kallolx/business-pos",
-    tech: ["React", "Node.js", "MySQL"]
+    image: "/projects/gmc.png",
+    description: "A beautiful landing page for a GMC Point.",
+    liveLink: "https://gmcpoint.vercel.app/",
+    githubLink: "https://github.com/Kallolx/gmcpoint",
+    tech: ["Next.js", "Tailwind", "Booking API"]
   },
   {
     id: 5,
-    name: "AI Student Tools",
-    category: "Education",
-    image: "/projects/p5.png",
-    description: "Comprehensive student management tool for BUBT students.",
-    liveLink: "https://studbuddy.vercel.app",
-    githubLink: "https://github.com/Kallolx/bubtStudenttool",
-    tech: ["Next.js", "Firebase", "TypeScript"]
+    name: "Qiurin",
+    category: "Business",
+    image: "/projects/qiurin.png",
+    description: "Modern business platform with advanced features and elegant design.",
+    liveLink: "https://www.qourin.com",
+    githubLink: "https://github.com/Kallolx/qiurin",
+    tech: ["Next.js", "React", "Tailwind"]
   },
   {
     id: 6,
-    name: "Business Landing Page",
-    category: "Business",
-    image: "/projects/p6.png",
-    description: "Corporate website with modern design and interactive features.",
-    liveLink: "https://msbabuitrads.vercel.app",
-    githubLink: "https://github.com/Kallolx/babuitrads",
-    tech: ["React", "Tailwind", "Animation"]
-  },
-  {
-    id: 7,
     name: "Agro e-commerce",
     category: "Business",
     image: "/projects/p7.png",
@@ -134,7 +84,58 @@ export const allProjects = [
     tech: ["Next.js", "Tailwind", "MongoDB"]
   },
   {
+    id: 7,
+    name: "Casino",
+    category: "Entertainment",
+    image: "/projects/p2.png",
+    description: "Modern betting platform with real-time updates and secure transactions.",
+    liveLink: "https://dhakabet.vercel.app",
+    githubLink: "https://github.com/Kallolx/casino",
+    tech: ["React", "Node.js", "WebSocket"]
+  },
+  {
     id: 8,
+    name: "E-commerce",
+    category: "Business",
+    image: "/projects/p3.png",
+    description: "Full-featured e-commerce platform with product management and secure checkout.",
+    liveLink: "https://ashamart.vercel.app",
+    githubLink: "https://github.com/Kallolx/asha-ecom",
+    tech: ["Next.js", "MongoDB", "Stripe"]
+  },
+  {
+    id: 9,
+    name: "POS",
+    category: "Business",
+    image: "/projects/p4.png",
+    description: "Web-based management software with POS system and inventory tracking.",
+    liveLink: "https://ashaenterprice.vercel.app",
+    githubLink: "https://github.com/Kallolx/business-pos",
+    tech: ["React", "Node.js", "MySQL"]
+  },
+  {
+    id: 10,
+    name: "AI Student Tools",
+    category: "Education",
+    image: "/projects/p5.png",
+    description: "Comprehensive student management tool for BUBT students.",
+    liveLink: "https://studbuddy.vercel.app",
+    githubLink: "https://github.com/Kallolx/bubtStudenttool",
+    tech: ["Next.js", "Firebase", "TypeScript"]
+  },
+  {
+    id: 11,
+    name: "Business Landing Page",
+    category: "Business",
+    image: "/projects/p6.png",
+    description: "Corporate website with modern design and interactive features.",
+    liveLink: "https://msbabuitrads.vercel.app",
+    githubLink: "https://github.com/Kallolx/babuitrads",
+    tech: ["React", "Tailwind", "Animation"]
+  },
+
+  {
+    id: 12,
     name: "Webgame Platform",
     category: "Entertainment",
     image: "/projects/p8.png",
@@ -144,7 +145,7 @@ export const allProjects = [
     tech: ["TypeScript", "React", "Game Dev"]
   },
   {
-    id: 9,
+    id: 13,
     name: "Metro Ticket Management",
     category: "Business",
     image: "/projects/p9.png",
@@ -152,7 +153,28 @@ export const allProjects = [
     liveLink: "https://dhaka-metro.vercel.app",
     githubLink: "https://github.com/Kallolx/dhaka-metro",
     tech: ["React", "Maps API", "Real-time"]
-  }
+  },
+  {
+    id: 14,
+    name: "AI Tools Platform",
+    category: "Technology",
+    image: "/projects/aitools.png",
+    description: "A comprehensive platform featuring various AI-powered tools and utilities.",
+    liveLink: "https://aitools-xi.vercel.app/",
+    githubLink: "https://github.com/Kallolx/aitools",
+    tech: ["Next.js", "TypeScript", "AI Integration"]
+  },
+  {
+    id: 15,
+    name: "Travel Agency",
+    category: "Business",
+    image: "/projects/travel.png",
+    description: "Complete travel agency solution with booking and management features.",
+    liveLink: "https://travelagency-peach.vercel.app/",
+    githubLink: "https://github.com/Kallolx/travel-agency",
+    tech: ["Next.js", "Tailwind", "Booking API"]
+  },
+    
 ]
 
 interface ProjectCardProps {
