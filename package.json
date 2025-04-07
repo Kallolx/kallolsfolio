@@ -16,18 +16,23 @@
     "vite": "^6.0.5"
   },
   "dependencies": {
+    "@tabler/icons-react": "^3.31.0",
     "@tsparticles/engine": "^3.7.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.7.1",
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^12.0.1",
+    "framer-motion": "^12.6.3",
     "locomotive-scroll": "^4.1.4",
+    "lucide-react": "^0.487.0",
+    "motion": "^12.6.3",
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.1.3",
     "react-tsparticles": "^2.12.2",
-    "tailwind-merge": "^3.0.2"
+    "tailwind-merge": "^3.2.0",
+    "tailwindcss-animate": "^1.0.7"
   }
 }
